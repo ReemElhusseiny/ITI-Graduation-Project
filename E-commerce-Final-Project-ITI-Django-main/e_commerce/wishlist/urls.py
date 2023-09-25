@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import WishListListView, AddToWishListView, RemoveFromWishListView
-# from .views import AddToWishListAPIView , GetWishListAPIView
+
 
 
 urlpatterns = [
