@@ -34,14 +34,6 @@ class BestSellingItemView(generics.ListAPIView):
     
     
     
-    
-        
-# products = ProductItem.objects.annotate(total_units_sold=Sum('orderitem__quantity'))
-# best_selling_items = products.order_by('-total_units_sold')
-
-# top_10_best_selling_items = best_selling_items[:10]
-       
-    
 @api_view(['POST'])
 def make_order(request):
     user = request.user
@@ -126,30 +118,3 @@ def order_list(request):
     return Response(order_data)
 
 
-# To Insert order details into Order Write this in the Content box in Add to order details page    
-# {
-#     "order_items": [
-#         {
-#             "product_id": 1,
-#             "quantity": 2
-#         },
-#         {
-#             "product_id": 2,
-#             "quantity": 1
-#         }
-#     ],
-#     "shipping_address": "123 Main St",
-#     "district": "Zamalek",
-#     "payment_method": "Credit Card"
-# }
-# from django.shortcuts import render
-# from django.db.models import Sum
-# from products.models import ProductItem
-# from orders.models import OrderItem
-
-
-
-# products = ProductItem.objects.annotate(total_units_sold=Sum('orderitem__quantity'))
-# best_selling_items = products.order_by('-total_units_sold')
-
-# top_10_best_selling_items = best_selling_items[:10]
