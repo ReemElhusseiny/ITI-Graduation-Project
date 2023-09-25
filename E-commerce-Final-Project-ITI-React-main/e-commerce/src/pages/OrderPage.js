@@ -221,7 +221,7 @@ const OrderPage = (props) => {
                             ))}
                         </ul>
 
-                        {/* <h4>Total Price: {cartItems.reduce((total, item) => total.plus(item.total_price), new Decimal('0')).plus(shippingCost).toFixed(2)}</h4> */}
+                       
 
                             <button type="submit" className="btn btn-primary" class="subbtn">Place Order</button>
  
